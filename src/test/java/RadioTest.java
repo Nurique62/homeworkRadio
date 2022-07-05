@@ -66,6 +66,26 @@ public class RadioTest {
         assertEquals(0, radio.getCurrentVolume());
 
     }
+    @Test
+    public void testNextIf15() {
+        Radio radio = new Radio(9);
+        radio.setCurrentStation(10);
+
+        radio.next();
+
+        assertEquals(1, radio.getCurrentStation());
+    }
+
+    @Test
+    public void testIncreaseVolume2() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(-1);
+
+        radio.increaseVolume();
+
+        assertEquals(1, radio.getCurrentVolume());
+
+    }
 }
 
 
